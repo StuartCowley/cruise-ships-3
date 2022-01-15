@@ -5,7 +5,8 @@ function Port(portName){
         this.ships.push(ship);
     };
     this.removeShip = function(ship){
-        this.ships.pop(ship);
+        const indexOfShip = this.ships.indexOf(ship);
+        this.ships.splice(indexOfShip, 1);
     };
 };
 
