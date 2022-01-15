@@ -2,6 +2,7 @@ function Ship(itinerary){
     this.itinerary = itinerary;
     this.currentPort = itinerary.ports[0];
     this.previousPort = null;
+    this.currentPort.addShip(this);
     this.setSail = function(){
         const itinerary = this.itinerary;
         const currentPortIndex = itinerary.ports.indexOf(this.currentPort);
